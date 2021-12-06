@@ -1,4 +1,4 @@
-package main
+package leetcode
 
 import "math"
 
@@ -11,7 +11,7 @@ func minSubArrayLen(target int, nums []int) int {
 	for end < n {
 		sum += nums[end]
 		for sum >= target {
-			ans = min(ans, end-start+1)
+			ans = min209(ans, end-start+1)
 			sum -= nums[start]
 			start++
 		}
@@ -25,13 +25,9 @@ func minSubArrayLen(target int, nums []int) int {
 
 }
 
-func min(a, b int) int {
+func min209(a, b int) int {
 	if a >= b {
 		return b
 	}
 	return a
-}
-
-func main() {
-
 }
