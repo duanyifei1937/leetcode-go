@@ -13,6 +13,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// 双指针法
 func reverseList(head *ListNode) *ListNode {
 	var pre *ListNode
 	cur := head
@@ -23,4 +24,18 @@ func reverseList(head *ListNode) *ListNode {
 		cur = next
 	}
 	return pre
+}
+
+//递归
+func reverseList2(head *ListNode) *ListNode {
+	return help(nil, head)
+}
+
+func help(pre, head *ListNode) *ListNode {
+	if head == nil {
+		return pre
+	}
+	next := head.Next
+	head.Next = pre
+	return help(head, next)
 }
