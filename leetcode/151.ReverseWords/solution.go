@@ -14,7 +14,7 @@ func reverseWords(s string) string {
 		fast++
 	}
 
-	// 删除中间空格
+	// 删除中间多于空格：保证间隔只有一个空格
 	for ; fast < len(ss); fast++ {
 		if fast-1 > 0 && ss[fast-1] == ss[fast] && ss[fast] == ' ' {
 			continue
