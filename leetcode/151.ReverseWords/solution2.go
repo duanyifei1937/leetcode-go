@@ -38,7 +38,7 @@ func reverseWords2(s string) string {
 	} else {
 		ss = ss[:slow]
 	}
-
+	return string(ss)
 
 
 }

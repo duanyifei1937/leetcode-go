@@ -48,7 +48,7 @@ func reverseWords(s string) string {
 	return string(ss)
 }
 
-func reverse(b *[]byte, left, right int) {
+func reverse2(b *[]byte, left, right int) {
 	for left < right {
 		(*b)[left], (*b)[right] = (*b)[right], (*b)[left]
 		left++
