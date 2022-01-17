@@ -31,7 +31,7 @@ func reverseWords(s string) string {
 	}
 
 	// 全部翻转
-	reverse(&ss, 0, len(ss)-1)
+	reverse2(&ss, 0, len(ss)-1)
 
 	// 单词范围翻转=>正转
 	// i -- words start;
@@ -41,7 +41,7 @@ func reverseWords(s string) string {
 		j := i
 		for ; j < len(ss) && ss[j] != ' '; j++ {
 		}
-		reverse(&ss, i, j-1)
+		reverse2(&ss, i, j-1)
 		i = j
 		i++
 	}

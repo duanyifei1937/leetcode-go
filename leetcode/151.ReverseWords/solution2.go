@@ -27,7 +27,7 @@ func reverseWords2(s string) string {
 	return string(ss)
 
 	// 全部翻转
-	reverse2(&ss, 0, len(ss) -1)
+	reverse3(&ss, 0, len(ss) -1)
 
 	// 单词翻转
 	i := 0
@@ -35,14 +35,14 @@ func reverseWords2(s string) string {
 		j := i
 		for ; j < len(ss) && ss[j] != ' '; j++ {
 		}
-		reverse2(&ss, i, j-1)
+		reverse3(&ss, i, j-1)
 		i = j
 		i++
 	}
 	return string(ss)
 }
 
-func reverse2(b *[]byte, left, right int) {
+func reverse3(b *[]byte, left, right int) {
 	for left < right {
 		(*b)[right], (*b)[left] = (*b)[left], (*b)[right]
 		left++
